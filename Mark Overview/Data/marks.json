@@ -1,0 +1,16 @@
+{
+  "semester": "Test Semester",
+  "subjects": [
+    {
+      "name": "Test Subject",
+      "marks": [
+        {
+          "name": "Test exam 1",
+          "mark": 5.3,
+          "weight": 1,
+          "date": "2024-06-01"
+        }
+      ]
+    }
+  ]
+}
