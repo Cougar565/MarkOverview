@@ -1,16 +1,1 @@
-{
-  "chosen_system": {
-    "school": "Gymnasium Thun",
-    "grade": "Gymnasium",
-    "country": "Switzerland",
-    "city": "Thun",
-    "parameters": {
-      "pluspoints": 1,
-      "grading": "1-6",
-      "passing_mark": 4.0,
-      "double_compensation": 1,
-      "subject_rounding": "0.5"
-    }
-  },
-  "chosen_subject": "Test"
-}
+{"user_data": {"id": 1, "username": "free_sacha", "email": "free_sacha@example.com"}, "chosen_system": {"id": 0, "creator_id": 0, "school": "Gymnasium Thun", "grade": "Gymnasium", "country": "Switzerland", "city": "Thun", "parameters": {"pluspoints": true, "grading": "1-6", "passing_mark": 4.0, "double_compensation": true, "subject_rounding": 0.5}}, "chosen_subject": "Test"}

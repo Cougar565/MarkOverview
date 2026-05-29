@@ -1,4 +1,4 @@
-from grading_system import choose_grading_system, add_grading_system, edit_grading_system, delete_grading_system
+from grading_system import choose_grading_system, add_grading_system, edit_grading_system, delete_grading_system, cleanup_grading_systems
 from marks import choose_marks_menu
 
 def main():
@@ -30,8 +30,11 @@ def main():
                 continue
             else:
                 print("Invalid choice. Please try again.")
+            cleanup_grading_systems()
         elif choice == "2":
             choose_marks_menu()
         elif choice == "3":
             print("Exiting the program. Goodbye!")
             break
+
+main()
