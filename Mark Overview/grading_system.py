@@ -1,22 +1,15 @@
 import os
 import json
 
-
+# This code is responsible for allowing the user to choose a grading system based on country, level, or city. It reads the available grading systems from a JSON file and saves the user's choice for later use in calculations.
 current_path = os.path.dirname(os.path.abspath(__file__))
-marks_path = f"{current_path}/Data/marks.json"
 grading_systems_path = f"{current_path}/Data/grading_systems.json"
 choices_path = f"{current_path}/Data/choices.json"
 
-with open(marks_path, "r") as marks_file:
-    marks_data = marks_file.read()
 with open(grading_systems_path, "r") as grading_systems_file:
-    grading_systems_data = grading_systems_file.read()
+    grading_systems = json.load(grading_systems_file)["systems"]
 with open(choices_path, "r") as choices_file:
-    choices_data = choices_file.read()
-
-grading_systems = eval(grading_systems_data)["systems"]
-marks = eval(marks_data)
-choices = eval(choices_data)
+    choices = json.load(choices_file)
 
 def choose_grading_system():
     system_country = input("Enter the country of the grading system: ")
@@ -62,7 +55,16 @@ def choose_grading_system():
         system_choice = 0
     chosen_system = valid_systems[system_choice]
 
+    choices["chosen_system"] = chosen_system
+    
     with open(f"{current_path}/Data/choices.json", "w") as choices_file:
-        json.dump({"chosen_system": chosen_system}, choices_file)
+        json.dump(choices, choices_file)
 
-choose_grading_system()
+def add_grading_system():
+    print("Adding a new grading system is not implemented yet.")
+
+def edit_grading_system():
+    print("Editing an existing grading system is not implemented yet.")
+
+def delete_grading_system():
+    print("Deleting a grading system is not implemented yet.")
